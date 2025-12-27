@@ -1,1 +1,138 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Georgia", serif;
+}
 
+body{
+  min-height:100vh;
+  background:#0f1220;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#eaeaea;
+  overflow:hidden;
+}
+
+/* NỀN NHẸ */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at top, #ffffff08, transparent 60%);
+  z-index:-1;
+}
+
+/* TAP */
+.tap{
+  position:fixed;
+  inset:0;
+  background:rgba(15,18,32,0.92);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  z-index:10;
+}
+
+.tap h1{
+  font-size:26px;
+  font-weight:normal;
+  letter-spacing:1px;
+}
+
+.tap p{
+  opacity:0.7;
+  font-size:14px;
+}
+
+/* LOCK */
+.lock{
+  display:none;
+  width:280px;
+  padding:24px;
+  border-radius:16px;
+  background:#1a1d33;
+  text-align:center;
+}
+
+.lock .title{
+  margin-bottom:12px;
+  font-size:16px;
+  opacity:0.85;
+}
+
+.lock input{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#0f1220;
+  color:#fff;
+  outline:none;
+}
+
+.lock button{
+  margin-top:14px;
+  padding:8px 24px;
+  border:none;
+  border-radius:20px;
+  background:#2e335a;
+  color:#fff;
+  font-size:14px;
+}
+
+#error{
+  margin-top:8px;
+  font-size:13px;
+  color:#ff9a9a;
+}
+
+/* CARD – THƯ */
+.card{
+  display:none;
+  max-width:360px;
+  padding:28px;
+  border-radius:18px;
+  background:#1a1d33;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(12px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+.card p{
+  margin-bottom:12px;
+  line-height:1.6;
+  font-size:15px;
+}
+
+.to{
+  margin-bottom:16px;
+  font-weight:bold;
+}
+
+.wish{
+  margin-top:18px;
+  text-align:center;
+  font-size:15px;
+  opacity:0.9;
+}
+
+.from{
+  margin-top:20px;
+  text-align:right;
+  font-style:italic;
+  opacity:0.7;
+}
